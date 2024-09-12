@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    max-width: 350px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    background-color: #333;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#product-image {
+  transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+
+.cart {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.cart h2 {
+    margin-top: 0;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+button {
+    background-color: #e04e4e;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #fff0f0;
+    color: #1f1f1f;
+}
+#search-bar {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+a:-webkit-any-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.selection{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.diseño{
+    background-color: #333;
+    padding: 10px;
+    margin: 10px;
+    width: auto;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.selection div {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+}
+
+.colorB {
+    background-color: black;
+    color: white;
+}
+
+.colorW {
+    color: #1f1f1f;
+    background-color: white;
+    
+}
+
+.fa-solid, .fas{
+    margin: 5px;
+    color: #7e7e7e;
+}
+
+.talles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.size {
+    display: inline-block; /* Esto asegura que los elementos estén en línea */
+  padding: 5px; /* Espacio interno */
+  border: 1px solid #ccc; /* Borde alrededor del tamaño */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-right: 5px; /* Espacio entre los tamaños */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre los talles */
+}
+
+.size:hover {
+    background-color: #f0f0f0;
+}
+
+#confirm-order {
+    background-color: #25D366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirm-order:hover {
+    background-color: #28A745;
+}
+h5{
+    margin: 0px;
+    color: #e04e4e;
+}
+.Aclaraciones{
+    font-size: 15px;
+    color: #535353;
+}
+.titulo{
+    margin: 0px;
+}
+.star{
+    color: #d6af00;
+}
