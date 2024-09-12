@@ -4,9 +4,6 @@ const cartTotal = document.getElementById('cart-total');
 const clearCartBtn = document.getElementById('clear-cart');
 const confirmOrderBtn = document.getElementById('confirm-order');
 
-let total = 0;
-let itemsInCart = [];
-
 
 
 
@@ -60,30 +57,36 @@ function changeImage(color, element) {
     }
 }
 
+// Variable para almacenar los items en el carrito y el total
+let itemsInCart = [];
+let total = 0;
+
 // Función para mostrar el carrito cuando se selecciona un producto
-function showCart() {
-    const cart = document.getElementById('cart');
-    const cartItems = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-    const productName = document.getElementById('product-image').getAttribute('data-name');
-    const productPrice = parseInt(document.getElementById('product-image').getAttribute('data-price'));
+function showCart(element) {
+    // Encontrar el contenedor más cercano con la clase 'diseño'
+    const productContainer = element.closest('.diseño');
+    
+    // Obtener la imagen y atributos del producto dentro del contenedor
+    const productImage = productContainer.querySelector('img.product');
+    const productName = productImage.getAttribute('data-name');
+    const productPrice = parseInt(productImage.getAttribute('data-price'));
 
     // Crear el elemento del carrito con el producto seleccionado
     const li = document.createElement('li');
     li.textContent = `${productName} - Talle: ${selectedSize}, Color: ${selectedColor} - $${productPrice}`;
-    cartItems.appendChild(li);
+    document.getElementById('cart-items').appendChild(li);
 
-    // Añadir el producto al array de items para el mensaje
+    // Añadir el producto al array de items para el mensaje (si es necesario)
     itemsInCart.push(`${productName} - Talle: ${selectedSize}, Color: ${selectedColor} - $${productPrice}`);
 
+    // Actualizar el total del carrito
     total += productPrice;
-    cartTotal.textContent = total;
+    document.getElementById('cart-total').textContent = total;
 
     // Mostrar carrito y botón de confirmación
-    cart.style.display = 'block';
+    document.getElementById('cart').style.display = 'block';
     document.getElementById('confirm-order').style.display = 'block';
 }
-
 
 // Función para vaciar el carrito
 document.getElementById('clear-cart').addEventListener('click', function() {
@@ -101,6 +104,7 @@ document.getElementById('clear-cart').addEventListener('click', function() {
     const cart = document.getElementById('cart');
     cart.style.display = 'none';
 });
+
 
 // Función para confirmar el pedido y enviar los detalles por WhatsApp
 document.getElementById('confirm-order').addEventListener('click', () => {
@@ -139,7 +143,3 @@ searchBar.addEventListener('input', (e) => {
       }
   });
 });
-
-
-
-
