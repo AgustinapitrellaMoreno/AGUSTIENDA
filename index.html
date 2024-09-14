@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kind Star</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1 class="titulo">Kind <span class="star">Star</span></h1>
+    
+    <!-- Barra de búsqueda -->
+    <input type="text" id="search-bar" placeholder=" Buscar camisetas...">
+    <nav>
+        <h5>Aclaraciones</h5>
+    <div class="Aclaraciones">Cerramos pedidos los Martes hasta las 16hs.</div>
+    </nav>
+    <div class="filtro">
+        <a href="#Buzos" class="filtros">Buzos</a>
+        <a href="#remeras" class="filtros">Remeras</a>
+    </div>
+    <h1 id="remeras">Nueva Colección</h1>
+</header>
+
+<section class="products">
+    <div class="diseño" data-black="remeras/Nlos piojos para web.png" data-white="remeras/Blos piojos para web.png">
+        <img id="product-image" src="remeras/Nlos piojos para web.png" class="product" alt="los piojos" data-name="los piojos" data-price="16000">
+        <div data-name="remera los piojos">Los Piojos</div>
+        <h6 class="descripcion">Mirame bien,puedo morir.Y una y mil veces renacer.</h6>
+        <p data-name="los piojos">$16000</p>
+        <h5 class="elegir">Elegir Talle:</h5>
+        <p class="talles"><i class="fa-solid fa-shirt"></i>
+            <span class="size" onclick="selectSize('S', this)">S</span>
+            <span class="size" onclick="selectSize('M', this)">M</span>
+            <span class="size" onclick="selectSize('L', this)">L</span>
+            <span class="size" onclick="selectSize('XL', this)">XL</span>
+            <span class="size" onclick="selectSize('XXL', this)">XXL</span>
+        </p>
+        <h5 class="elegir">Elegir Color:</h5>
+        <div class="selection">
+            <div class="colorB" onclick="changeImage('black', this)">B</div>
+            <div class="colorW" onclick="changeImage('white', this)">W</div>
+        </div>
+        <div class="comprar" onclick="showCart(this)">
+            <div class="car"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
+    
+    <div class="diseño" data-black="remeras/REMERAARAÑAWEBN.png" data-white="remeras/REMERAARAÑAWEBB.png">
+        <img id="product-image" src="remeras/REMERAARAÑAWEBN.png" class="product" alt="remera Araña" data-name="remera Araña" data-price="16000">
+        <div data-name="remera Araña">La Araña Oscura</div>
+        <h6 class="descripcion">Remera perfecta para amantes del misterio y el suspenso.</h6>
+        <p data-name="remera Araña">$16000</p>
+        <h5 class="elegir">Elegir Talle:</h5>
+        <p class="talles"><i class="fa-solid fa-shirt"></i>
+            <span class="size" onclick="selectSize('S', this)">S</span>
+            <span class="size" onclick="selectSize('M', this)">M</span>
+            <span class="size" onclick="selectSize('L', this)">L</span>
+            <span class="size" onclick="selectSize('XL', this)">XL</span>
+            <span class="size" onclick="selectSize('XXL', this)">XXL</span>
+        </p>
+        <h5 class="elegir">Elegir Color:</h5>
+        <div class="selection">
+            <div class="colorB" onclick="changeImage('black', this)">B</div>
+            <div class="colorW" onclick="changeImage('white', this)">W</div>
+        </div>
+        <div class="comprar" onclick="showCart(this)">
+            <div class="car"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
+
+    <div class="diseño" data-black="remeras/GATOWEBN.png" data-white="remeras/GATOWEBB.png">
+        <img id="product-image" src="remeras/GATOWEBN.png" class="product" alt="remera GATO" data-name="remera GATO" data-price="14000">
+        <div data-name="remera GATO">Remera de Gato con Letras Chinas</div>
+        <h6 class="descripcion">Estilo único con un gato y caracteres chinos.</h6>
+        <p data-name="remera GATO">$14000</p>
+        <h5 class="elegir">Elegir Talle:</h5>
+        <p class="talles"><i class="fa-solid fa-shirt"></i>
+            <span class="size" onclick="selectSize('S', this)">S</span>
+            <span class="size" onclick="selectSize('M', this)">M</span>
+            <span class="size" onclick="selectSize('L', this)">L</span>
+            <span class="size" onclick="selectSize('XL', this)">XL</span>
+            <span class="size" onclick="selectSize('XXL', this)">XXL</span>
+        </p>
+        <h5 class="elegir">Elegir Color:</h5>
+        <div class="selection">
+            <div class="colorB" onclick="changeImage('black', this)">B</div>
+            <div class="colorW" onclick="changeImage('white', this)">W</div>
+        </div>
+        <div class="comprar" onclick="showCart(this)">
+            <div class="car"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
+    <div class="diseño" data-black="" data-white="remeras/florBweb.png">
+        <img id="product-image" src="remeras/florBweb.png" class="product" alt="remera flor" data-name="remera flor" data-price="15500">
+        <div data-name="remera flor">Flor Encantada</div>
+        <h6 class="descripcion">Sencillez y frescura con una delicada flor amarilla.</h6>
+        <p data-name="remera flor">$15500</p>
+        <h5 class="elegir">Elegir Talle:</h5>
+        <p class="talles"><i class="fa-solid fa-shirt"></i>
+            <span class="size" onclick="selectSize('S', this)">S</span>
+            <span class="size" onclick="selectSize('M', this)">M</span>
+            <span class="size" onclick="selectSize('L', this)">L</span>
+            <span class="size" onclick="selectSize('XL', this)">XL</span>
+            <span class="size" onclick="selectSize('XXL', this)">XXL</span>
+        </p>
+        <h5 class="elegir">Elegir Color:</h5>
+        <div class="selection">
+            <div class="colorW" onclick="changeImage('white', this)">W</div>
+        </div>
+        <div class="comprar" onclick="showCart(this)">
+            <div class="car"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
+    
+    <div class="cart" id="cart" style="display: none;">
+        <h2>Tu Carrito</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <button id="clear-cart">Vaciar Carrito</button>
+        <button id="confirm-order" style="display: none;">Confirmar Pedido</button>
+    </div>
+</section>
+<div class="buzos">
+    <h1 id="Buzos">Colección Buzos</h1>
+</div>
+<section class="products">
+    <div class="diseño" data-black="Buzos/buzoNdadosweb.png" data-white="Buzos/buzoBdadosweb.png">
+        <img id="product-image" src="Buzos/buzoNdadosweb.png" class="product" alt="Dados" data-name="Buzo Dados" data-price="28500">
+        <div data-name="Buzo Dados">El Juego del Azar en Blanco y Negro</div>
+        <h6 class="descripcion">Buzo en blanco y negro que refleja el misterio y la magia del azar.</h6>
+        <p data-name="Buzo Dados">$28500</p>
+        <h5 class="elegir">Elegir Talle:</h5>
+        <p class="talles"><i class="fa-solid fa-shirt"></i>
+            <span class="size" onclick="selectSize('S', this)">S</span>
+            <span class="size" onclick="selectSize('M', this)">M</span>
+            <span class="size" onclick="selectSize('L', this)">L</span>
+            <span class="size" onclick="selectSize('XL', this)">XL</span>
+            <span class="size" onclick="selectSize('XXL', this)">XXL</span>
+        </p>
+        <h5 class="elegir">Elegir Color:</h5>
+        <div class="selection">
+            <div class="colorB" onclick="changeImage('black', this)">B</div>
+            <div class="colorW" onclick="changeImage('white', this)">W</div>
+        </div>
+        <div class="comprar" onclick="showCart(this)">
+            <div class="car"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
+    <div class="diseño" data-black="Buzos/buzocalaveraNweb.png" data-white="">
+        <img id="product-image" src="Buzos/buzocalaveraNweb.png" class="product" alt="Buzo Calavera" data-name="Buzo Calavera" data-price="28500">
+        <div data-name="Buzo Calavera">Buzo Calavera Rebelde</div>
+        <h6 class="descripcion">Buzo con calavera de audacia y misterio en cada detalle.</h6>
+        <p data-name="Buzo Calavera">$28500</p>
+        <h5 class="elegir">Elegir Talle:</h5>
+        <p class="talles"><i class="fa-solid fa-shirt"></i>
+            <span class="size" onclick="selectSize('S', this)">S</span>
+            <span class="size" onclick="selectSize('M', this)">M</span>
+            <span class="size" onclick="selectSize('L', this)">L</span>
+            <span class="size" onclick="selectSize('XL', this)">XL</span>
+            <span class="size" onclick="selectSize('XXL', this)">XXL</span>
+        </p>
+        <h5 class="elegir">Elegir Color:</h5>
+        <div class="selection">
+            <div class="colorB" onclick="changeImage('black', this)">B</div>
+            
+        </div>
+        <div class="comprar" onclick="showCart(this)">
+            <div class="car"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
